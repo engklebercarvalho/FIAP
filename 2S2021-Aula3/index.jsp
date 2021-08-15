@@ -1,55 +1,29 @@
-<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
 
-<head>
-    <title>Corretto8 - Tomcat8.5 - Hello world</title>
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Get Server name(hostname) in JSP</title>
+        <link rel="stylesheet" href="/resources/themes/master.css" type="text/css" />
+    </head>
 
-<body>
-    <table>
-        <tr>
-            <td>Operating System</td>
-            <td>
-                <%= System.getProperty("os.name") %>
-            </td>
-        </tr>
-        <tr>
-            <td>CPU Architecture</td>
-            <td>
-                <%= System.getProperty("os.arch") %>
-            </td>
-        </tr>
-        <tr>
-            <td>Java Vendor</td>
-            <td>
-                <%= System.getProperty("java.vendor") %>
-            </td>
-        </tr>
-        <tr>
-            <td>Java URL</td>
-            <td>
-                <%= System.getProperty("java.vendor.url") %>
-            </td>
-        </tr>
-        <tr>
-            <td>Java Version</td>
-            <td>
-                <%= System.getProperty("java.version") %>
-            </td>
-        </tr>
-        <tr>
-            <td>JVM Version</td>
-            <td>
-                <%= System.getProperty("java.vm.version") %>
-            </td>
-        </tr>
-        <tr>
-            <td>Tomcat Version</td>
-            <td>
-                <%= application.getServerInfo() %>
-            </td>
-        </tr>
-    </table>
+    <body>
+        <div id="allContent">
+            <%@include file="/header.jsp"%>
 
-</body>
+                <div id="myContent">
+                    <h1>
+                        JSP - Get Server HOST name
+                    </h1>
+                </div>
+                <div id="myExample">
+                    Server host name is: <b><%=request.getServerName() %></b>
+                </div>
 
-</html>
+                <%@include file="/footer.jsp"%>
+        </div>
+    </body>
+
+    </html>
