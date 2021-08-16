@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" 
+    page import="java.net.*" %>
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <html>
 
@@ -10,17 +11,25 @@
     </head>
 
     <body>
-        <div id="allContent">
-            <div id="myContent">
-                <h1>
-                    My Test App
-                </h1>
-            </div>
-            <div id="myExample">
-                Servidor: <b><%=request.getServerName() %></b>
-            </div>
 
-        </div>
+        <%  String hostname, serverAddress;
+            hostname = "error";
+            serverAddress = "error";
+            try {
+                InetAddress inetAddress;
+                inetAddress = InetAddress.getLocalHost();
+                hostname = inetAddress.getHostName();
+                serverAddress = inetAddress.toString();
+            } catch (UnknownHostException e) {
+
+                e.printStackTrace();
+            }
+            %>
+            <h1>My App Test</h1>
+            <li>InetAddress: <%=serverAddress %>
+            <li>InetAddress.hostname: <%=hostname %>
+
+
     </body>
 
     </html>
