@@ -5,15 +5,15 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>Aplicação Teste</title>
-        <link rel="stylesheet" href="/resources/themes/master.css" type="text/css" />
+        <title>My Test App/title>
+            <link rel="stylesheet" href="/resources/themes/master.css" type="text/css" />
     </head>
 
     <body>
         <div id="allContent">
             <div id="myContent">
                 <h1>
-                    My App
+                    My Test App
                 </h1>
             </div>
             <div id="myExample">
