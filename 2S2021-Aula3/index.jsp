@@ -13,7 +13,7 @@
         <div id="allContent">
             <div id="myContent">
                 <h1>
-                    Minha aplicação
+                    My App
                 </h1>
             </div>
             <div id="myExample">
