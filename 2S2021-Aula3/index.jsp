@@ -5,24 +5,21 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>Get Server name(hostname) in JSP</title>
+        <title>Aplicação Teste</title>
         <link rel="stylesheet" href="/resources/themes/master.css" type="text/css" />
     </head>
 
     <body>
         <div id="allContent">
-            <%@include file="/header.jsp"%>
+            <div id="myContent">
+                <h1>
+                    Minha aplicação
+                </h1>
+            </div>
+            <div id="myExample">
+                Servidor: <b><%=request.getServerName() %></b>
+            </div>
 
-                <div id="myContent">
-                    <h1>
-                        JSP - Get Server HOST name
-                    </h1>
-                </div>
-                <div id="myExample">
-                    Server host name is: <b><%=request.getServerName() %></b>
-                </div>
-
-                <%@include file="/footer.jsp"%>
         </div>
     </body>
 
